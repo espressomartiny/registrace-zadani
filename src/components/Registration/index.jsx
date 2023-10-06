@@ -14,6 +14,17 @@ const Registration = () => {
     console.log(user);
   };
 
+  const fillName = (e) => {
+    setUser({
+      ...user,
+      username:
+        user.username === "" && e.target.value.includes("@")
+          ? e.target.value.split("@")[0]
+          : "",
+      email: e.target.value,
+    });
+  };
+
   return (
     <form className="form" onSubmit={handleSumbit}>
       <input
@@ -22,6 +33,7 @@ const Registration = () => {
         type="email"
         onChange={(e) => {
           setUser({ ...user, email: e.target.value });
+          fillName(e);
         }}
       ></input>
       <input
