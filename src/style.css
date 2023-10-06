@@ -2,7 +2,8 @@
 
 * {
   box-sizing: border-box;
-}
+  background-color: #edecf1;
+  }
 
 html {
   font-family: 'Open Sans', sans-serif;
@@ -12,6 +13,7 @@ html {
   max-width: 26rem;
   margin-right: auto;
   margin-left: auto;
+  
 }
 
 header {
@@ -26,4 +28,8 @@ header {
   height: 10rem;
   background-image: url(./img/rocket.svg);
   background-size: contain;
+}
+
+h1 {
+  text-align: center;
 }
